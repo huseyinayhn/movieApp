@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="card">
+      <img src="{% static 'img/'|add:movie.image %}" class="card-img-top" alt="Not Found">
+      <div class="card-body">
+        <h5 class="card-title">{{ movie.movie_name }}</h5>
+        <p class="card-text">{{ movie.description }}</p>
+        <a href="{% url 'moviedetails' movie.id %}" class="btn btn-primary">Go somewhere</a>
+        <a href="{% url 'addFavorite' movie.id %}" class="btn btn-primary">Add Favorite</a>
+      </div>
+ </div>
